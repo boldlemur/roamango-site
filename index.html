@@ -217,11 +217,17 @@ nav.scrolled{
 .player-btn:hover{background:rgba(0,0,0,.62)}
 .player-btn:active{transform:scale(.94)}
 .player-btn svg{width:17px;height:17px}
-.player .ic-pause,.player .ic-sound-on{display:none}
+.player .ic-pause,.player .ic-sound-on,.player .ic-fs-close{display:none}
 .player.playing .ic-pause{display:block}
 .player.playing .ic-play{display:none}
 .player.sound .ic-sound-on{display:block}
 .player.sound .ic-sound-off{display:none}
+.player.fs .ic-fs-close{display:block}
+.player.fs .ic-fs-open{display:none}
+.player:fullscreen{border-radius:0}
+.player:fullscreen video{object-fit:contain}
+.player:-webkit-full-screen{border-radius:0}
+.player:-webkit-full-screen video{object-fit:contain}
 
 /* ============================================================
    MARQUEE / FEATURE PILLS
@@ -628,6 +634,10 @@ html:not(.unlocked) body{overflow:hidden}
           <button class="player-btn" id="heroMuteBtn" type="button" aria-label="Unmute video">
             <svg class="ic-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z" fill="currentColor" stroke="none"/><path d="M16.5 9.5l5 5M21.5 9.5l-5 5"/></svg>
             <svg class="ic-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 010 7M18.5 5.5a9.5 9.5 0 010 13"/></svg>
+          </button>
+          <button class="player-btn" id="heroFsBtn" type="button" aria-label="Full screen">
+            <svg class="ic-fs-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M8 21H5a2 2 0 01-2-2v-3M16 21h3a2 2 0 002-2v-3"/></svg>
+            <svg class="ic-fs-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v4a2 2 0 01-2 2H3M15 3v4a2 2 0 002 2h4M9 21v-4a2 2 0 00-2-2H3M15 21v-4a2 2 0 012-2h4"/></svg>
           </button>
         </div>
       </div>
@@ -1055,6 +1065,28 @@ html:not(.unlocked) body{overflow:hidden}
     });
     ['play','pause','volumechange'].forEach(function(ev){ heroVideo.addEventListener(ev, syncHero); });
     syncHero();
+
+    /* Fullscreen: standard API on the player; iPhone falls back to native video fullscreen */
+    var heroFsBtn = document.getElementById('heroFsBtn');
+    if(heroFsBtn){
+      var fsEl = function(){ return document.fullscreenElement || document.webkitFullscreenElement || null; };
+      heroFsBtn.addEventListener('click', function(){
+        try{
+          if(fsEl()){
+            (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+          } else if(heroPlayer.requestFullscreen){
+            heroPlayer.requestFullscreen().catch(function(){});
+          } else if(heroPlayer.webkitRequestFullscreen){
+            heroPlayer.webkitRequestFullscreen();
+          } else if(heroVideo.webkitEnterFullscreen){
+            heroVideo.webkitEnterFullscreen();
+          }
+        }catch(e){}
+      });
+      ['fullscreenchange','webkitfullscreenchange'].forEach(function(ev){
+        document.addEventListener(ev, function(){ heroPlayer.classList.toggle('fs', !!fsEl()); });
+      });
+    }
   }
 })();
 </script>
