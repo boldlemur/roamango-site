@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Roamango — Turn your camera roll into cinematic travel films</title>
 <meta name="description" content="Roamango scans the photos already on your iPhone, rebuilds every trip you've taken, and turns them into a cinematic film. Fully on-device. No accounts, no cloud.">
+<!-- PRE-LAUNCH: remove at launch -->
+<meta name="robots" content="noindex">
 <link rel="icon" type="image/png" href="assets/brand/icon.png">
 <meta property="og:title" content="Roamango — your camera roll is a travel film waiting to happen">
 <meta property="og:description" content="Automatically turn the photos on your iPhone into cinematic animated travel films. On-device. Private. Effortless.">
@@ -471,9 +473,81 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line)}
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none}
 }
+
+/* ============================================================
+   PRE-LAUNCH GATE — remove this whole block at launch
+   ============================================================ */
+#gate{
+  position:fixed;inset:0;z-index:100;background:#09090d;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:18px;padding:24px;text-align:center;
+}
+#gate::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(60% 40% at 50% 0%,rgba(255,120,30,.14),transparent 70%);
+}
+html.unlocked #gate{display:none}
+html:not(.unlocked) body{overflow:hidden}
+#gate img{width:76px;height:76px;border-radius:19px;box-shadow:0 12px 36px -10px rgba(255,110,30,.55)}
+#gate .gate-name{font-size:26px;font-weight:700;letter-spacing:-.02em}
+#gate p{color:var(--muted);font-size:15px;max-width:34ch}
+#gate form{display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center}
+#gate input{
+  font:inherit;font-size:15px;color:var(--ink);
+  background:rgba(255,255,255,.05);border:1px solid var(--line-2);border-radius:100px;
+  padding:13px 20px;width:220px;outline:none;text-align:center;
+}
+#gate input:focus{border-color:var(--mango-2)}
+#gate.wrong input{animation:gate-shake .4s;border-color:var(--mango-4)}
+@keyframes gate-shake{0%,100%{transform:none}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
 </style>
 </head>
 <body>
+
+<!-- ============================ PRE-LAUNCH GATE — remove at launch ============================ -->
+<div id="gate">
+  <img src="assets/brand/icon.png" alt="Roamango">
+  <div class="gate-name">Roamango</div>
+  <p>Almost ready to roam. Enter the preview password.</p>
+  <form id="gateForm">
+    <input type="password" id="gateInput" placeholder="Password" autocomplete="off" autofocus>
+    <button class="btn btn-primary" type="submit">Enter</button>
+  </form>
+</div>
+<script>
+(function(){
+  "use strict";
+  var KEY = 'roamango-gate-v1';
+  var HASH = '4234fea5d6b7b8adbeb6af2d25bd8403bde07719f177a7972d1626feb6089763';
+  if(localStorage.getItem(KEY) === 'open'){
+    document.documentElement.classList.add('unlocked');
+    return;
+  }
+  var gate = document.getElementById('gate');
+  var input = document.getElementById('gateInput');
+  function sha256(s){
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)).then(function(buf){
+      return Array.prototype.map.call(new Uint8Array(buf), function(b){
+        return b.toString(16).padStart(2,'0');
+      }).join('');
+    });
+  }
+  document.getElementById('gateForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    sha256(input.value.trim().toLowerCase()).then(function(h){
+      if(h === HASH){
+        localStorage.setItem(KEY, 'open');
+        document.documentElement.classList.add('unlocked');
+      } else {
+        gate.classList.remove('wrong');
+        void gate.offsetWidth; /* restart shake animation */
+        gate.classList.add('wrong');
+        input.value = '';
+      }
+    });
+  });
+})();
+</script>
 
 <!-- ============================ NAV ============================ -->
 <nav id="nav">
