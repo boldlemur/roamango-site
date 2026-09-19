@@ -231,9 +231,14 @@ p+p{margin-top:1em}
   box-shadow:var(--polaroid-shadow);display:block;width:100%;
   transition:transform .45s var(--ease);
 }
-/* The app screenshots ship with transparent backgrounds, so the print itself
-   must back them — a dark plate turns each one into a black slab. */
+/* The app screenshots ship with transparent backgrounds, so the print backs
+   them. Real photo prints keep the white border that makes them read as
+   photos; device renders get .device — the app's own splash green, which
+   separates a phone whether its screen is bright or dark. Theatre navy was
+   tried and rejected: a dark-screened phone dissolves into it. */
 .polaroid img{width:100%;height:auto;border-radius:0;background:transparent}
+.polaroid.device{background:var(--deep)}
+.polaroid.device .cap{color:rgba(255,255,255,.72)}
 .polaroid video{width:100%;height:auto;border-radius:0;background:#0c0c10}
 /* two prints laid side by side */
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:13px;align-items:start}
@@ -605,7 +610,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--paper-3);padding:44p
 
     <div class="duo">
       <div class="duo-media reveal">
-        <figure class="polaroid tilt-l">
+        <figure class="polaroid device tilt-l">
           <img src="assets/screens/trip-editor.png" alt="The Roamango trip editor: a full-bleed map with numbered stops joined by a route." width="1290" height="2796" loading="lazy" decoding="async">
           <figcaption class="cap">drag it anywhere</figcaption>
         </figure>
@@ -657,11 +662,11 @@ footer{background:var(--paper-2);border-top:1px solid var(--paper-3);padding:44p
 
     <div class="duo flip">
       <div class="duo-media pair reveal">
-        <figure class="polaroid tilt-l">
+        <figure class="polaroid device tilt-l">
           <img src="assets/screens/music.png" alt="The soundtrack picker, showing mood tiles like Chill Acoustic, Feel-Good Pop and City Nights." width="1290" height="2796" loading="lazy" decoding="async">
           <figcaption class="cap">pick a mood</figcaption>
         </figure>
-        <figure class="polaroid tilt-r">
+        <figure class="polaroid device tilt-r">
           <img src="assets/screens/narration.png" alt="The narration screen, recording a voice track over a roam as it plays." width="1290" height="2796" loading="lazy" decoding="async">
           <figcaption class="cap">or talk over it</figcaption>
         </figure>
@@ -681,7 +686,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--paper-3);padding:44p
 
     <div class="duo" style="margin-top:clamp(64px,8vw,110px)">
       <div class="duo-media reveal">
-        <figure class="polaroid tilt-l">
+        <figure class="polaroid device tilt-l">
           <img src="assets/screens/select-photos.png" alt="The photo curation grid, showing which shots were auto-selected for a stop." width="1290" height="2796" loading="lazy" decoding="async">
         </figure>
       </div>
@@ -704,7 +709,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--paper-3);padding:44p
 
     <div class="duo">
       <div class="duo-media reveal">
-        <figure class="polaroid tilt-l">
+        <figure class="polaroid device tilt-l">
           <img src="assets/screens/custom-night-out.png" alt="The Build Your Own sheet: start from your photos, pick a detail level, and Roamango maps out the stops." width="1290" height="2796" loading="lazy" decoding="async">
           <figcaption class="cap">any night, any dates</figcaption>
         </figure>
@@ -729,7 +734,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--paper-3);padding:44p
 
     <div class="duo flip">
       <div class="duo-media reveal">
-        <figure class="polaroid tilt-r">
+        <figure class="polaroid device tilt-r">
           <img src="assets/screens/year-in-review.png" alt="A Year in Review roam on the globe, showing the year's stats." width="1290" height="2796" loading="lazy" decoding="async">
           <figcaption class="cap">december, sorted</figcaption>
         </figure>
@@ -754,7 +759,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--paper-3);padding:44p
 
     <div class="duo">
       <div class="duo-media reveal">
-        <figure class="polaroid tilt-l">
+        <figure class="polaroid device tilt-l">
           <img src="assets/screens/stats.png" alt="The Trip Statistics screen: a globe with visited countries painted coral, above cards counting countries, distance travelled, photos and days exploring." width="1320" height="2868" loading="lazy" decoding="async">
           <figcaption class="cap">the receipts</figcaption>
         </figure>
@@ -785,11 +790,11 @@ footer{background:var(--paper-2);border-top:1px solid var(--paper-3);padding:44p
 
     <div class="duo flip">
       <div class="duo-media pair reveal">
-        <figure class="polaroid tilt-l">
+        <figure class="polaroid device tilt-l">
           <img src="assets/screens/compare-1.png" alt="Paul's phone after a compare: the shared globe with his 22 countries in coral, five in gold where both have been, and the totals underneath." width="1320" height="2868" loading="lazy" decoding="async">
           <figcaption class="cap">your side</figcaption>
         </figure>
-        <figure class="polaroid tilt-r">
+        <figure class="polaroid device tilt-r">
           <img src="assets/screens/compare-2.png" alt="The same shared globe on Janet's phone a moment later, with the identity colours swapped so Paul's countries read teal." width="1320" height="2868" loading="lazy" decoding="async">
           <figcaption class="cap">their side</figcaption>
         </figure>
@@ -818,7 +823,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--paper-3);padding:44p
         <p class="lead">Worth stating once and then never again: Roamango has nowhere to send your photos even if it wanted to. It reads your library through Apple's standard permission, does the work on the phone, and writes the film to the phone.</p>
       </div>
       <div class="duo-media reveal">
-        <figure class="polaroid tilt-r">
+        <figure class="polaroid device tilt-r">
           <img src="assets/screens/privacy.png" alt="The globe home screen with a lock resting over it — every trip found, and every photo read, on the phone itself." width="1290" height="2796" loading="lazy" decoding="async">
         </figure>
       </div>
