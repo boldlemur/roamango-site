@@ -52,6 +52,7 @@
   --gold:#FFC74D;         /* AppTheme.compareBoth */
   --teal:#4DB8D9;         /* AppTheme.compareTheirs */
   --deep:#1A3F45;         /* SplashBackground */
+  --clay:#DDAE8C;         /* device-print plate — desaturated coral */
   --navy:#121724;         /* theatre band */
   --navy-2:#1F2438;
 
@@ -233,12 +234,13 @@ p+p{margin-top:1em}
 }
 /* The app screenshots ship with transparent backgrounds, so the print backs
    them. Real photo prints keep the white border that makes them read as
-   photos; device renders get .device — the app's own splash green, which
-   separates a phone whether its screen is bright or dark. Theatre navy was
-   tried and rejected: a dark-screened phone dissolves into it. */
+   photos; device renders get .device — warm clay, a desaturated cousin of
+   the coral accents. The plate has to agree with the cream in TEMPERATURE,
+   not just in value: splash green (#1A3F45) and theatre navy both read as
+   cold slabs dropped on a warm page, whatever their darkness. */
 .polaroid img{width:100%;height:auto;border-radius:0;background:transparent}
-.polaroid.device{background:var(--deep)}
-.polaroid.device .cap{color:rgba(255,255,255,.72)}
+.polaroid.device{background:var(--clay)}
+.polaroid.device .cap{color:var(--ink)}
 .polaroid video{width:100%;height:auto;border-radius:0;background:#0c0c10}
 /* two prints laid side by side */
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:13px;align-items:start}
