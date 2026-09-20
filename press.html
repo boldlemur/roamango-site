@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Roamango — Press kit</title>
+<meta name="description" content="Press kit for Roamango: boilerplate copy, fact sheet, screenshots, example films and brand assets. Everything here is cleared for editorial use.">
+
+<link rel="icon" href="assets/brand/icon.png">
+<link rel="preload" as="font" type="font/ttf" href="assets/fonts/Montserrat-Regular.ttf" crossorigin>
+<meta name="theme-color" content="#FAF5E6">
+
+<meta property="og:title" content="Roamango — Press kit">
+<meta property="og:description" content="Boilerplate copy, fact sheet, screenshots, example films and brand assets. Cleared for editorial use.">
+<meta property="og:image" content="https://roamango.co/assets/brand/og-card-v2.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://roamango.co/press.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Roamango">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Roamango — Press kit">
+<meta name="twitter:description" content="Boilerplate copy, fact sheet, screenshots, example films and brand assets. Cleared for editorial use.">
+<meta name="twitter:image" content="https://roamango.co/assets/brand/og-card-v2.jpg">
+
+<style>
+/* ═══════════════════════════════════════════════════════════════════════
+   ROAMANGO — PRESS KIT
+   Same tokens as index.html, but this page is a document, not a roam:
+   no route spine, no reveal choreography. A journalist should be able to
+   land here, copy three paragraphs and leave inside ninety seconds.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+@font-face{font-family:'Montserrat';src:url('assets/fonts/Montserrat-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Montserrat';src:url('assets/fonts/Montserrat-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Montserrat';src:url('assets/fonts/Montserrat-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'Caveat';src:url('assets/fonts/Caveat-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'Anton';src:url('assets/fonts/Anton-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+
+:root{
+  --paper:#FAF5E6; --paper-2:#F3EAD6; --paper-3:#EADFC6;
+  --ink:#1F2328; --ink-2:#5A5F66; --ink-3:#8A9099;
+  --coral:#FF6B4D; --route:#D92626; --gold:#FFC74D; --teal:#4DB8D9;
+  --deep:#1A3F45; --clay:#E9CAB0; --navy:#121724; --navy-2:#1F2438;
+
+  --font-display:Futura,'Jost','Montserrat',-apple-system,sans-serif;
+  --font-body:'Montserrat',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --font-hand:'Caveat',cursive;
+  --font-num:'Anton',var(--font-display);
+  --font-mono:ui-monospace,SFMono-Regular,'SF Mono',Menlo,monospace;
+
+  --maxw:1180px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --polaroid-shadow:0 18px 44px -12px rgba(0,0,0,.42), 0 3px 10px rgba(0,0,0,.16);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:92px}
+body{
+  font-family:var(--font-body);background:var(--paper);color:var(--ink);
+  line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+/* Paper grain, as on the front page. */
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9000;opacity:.42;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--coral);color:#fff}
+:focus-visible{outline:2.5px solid var(--coral);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-9999px;top:0;z-index:10000;background:var(--coral);color:#fff;padding:12px 20px;border-radius:999px;font-weight:600}
+.skip:focus{left:16px;top:16px}
+
+h1,h2,h3{font-family:var(--font-display);font-weight:700;line-height:1.06;letter-spacing:-.005em}
+h1{font-size:clamp(38px,6vw,76px);letter-spacing:-.018em}
+h2{font-size:clamp(25px,3.4vw,42px);letter-spacing:-.01em}
+h3{font-size:clamp(16px,1.7vw,19px);letter-spacing:.005em}
+.lead{font-size:clamp(16.5px,1.5vw,19px);color:var(--ink-2);max-width:60ch;margin-top:20px}
+p+p{margin-top:1em}
+
+.label{
+  font-family:var(--font-display);font-size:12px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.16em;color:var(--coral);
+  display:flex;align-items:center;gap:12px;margin-bottom:18px;
+}
+.label::after{content:'';flex:1;height:1px;background:var(--paper-3);max-width:120px}
+.dark .label{color:var(--gold)}
+.dark .label::after{background:rgba(255,255,255,.16)}
+
+.note{font-family:var(--font-hand);font-size:clamp(19px,1.9vw,25px);line-height:1.25;color:var(--route);transform:rotate(-2deg);display:inline-block}
+.note .arrow{display:inline-block;transform:translateY(4px) rotate(8deg);margin-right:6px}
+
+/* ── Buttons ────────────────────────────────────────────────────────── */
+.btn{
+  display:inline-flex;align-items:center;gap:11px;padding:15px 27px;
+  border-radius:999px;border:1.5px solid transparent;
+  font-family:var(--font-display);font-size:14.5px;font-weight:700;letter-spacing:.02em;
+  text-decoration:none;cursor:pointer;background:none;
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s,border-color .2s,color .2s;
+}
+.btn-primary{background:var(--coral);color:#fff;box-shadow:0 10px 26px -10px rgba(255,107,77,.85)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px -12px rgba(255,107,77,.95)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+.dark .btn-ghost{border-color:rgba(255,255,255,.34);color:#fff}
+.dark .btn-ghost:hover{background:#fff;color:var(--navy)}
+.btn:active{transform:translateY(1px)}
+.btn .sub{display:block;font-size:10px;font-weight:600;opacity:.72;letter-spacing:.09em;line-height:1.1;text-transform:uppercase}
+.btn .main{display:block;font-size:15px;line-height:1.15;letter-spacing:.01em}
+.btn svg{width:17px;height:17px;flex:none;fill:currentColor}
+
+/* ── Masthead ───────────────────────────────────────────────────────── */
+.masthead{position:sticky;top:0;z-index:60;background:rgba(250,245,230,.88);backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid var(--paper-3)}
+.masthead-inner{max-width:var(--maxw);margin:0 auto;padding:14px clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.wordmark{display:flex;align-items:center;gap:11px;text-decoration:none;font-family:var(--font-display);font-weight:700;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--coral)}
+.wordmark img{width:29px;height:29px;border-radius:7px}
+.wordmark .kit{font-size:11px;letter-spacing:.14em;color:var(--ink-3);border-left:1px solid var(--paper-3);padding-left:11px}
+.masthead .btn{padding:11px 20px}
+.mast-nav{display:flex;gap:22px;align-items:center;font-size:12.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;font-family:var(--font-display)}
+.mast-nav a{color:var(--ink-2);text-decoration:none;transition:color .2s}
+.mast-nav a:hover{color:var(--coral)}
+@media(max-width:940px){.mast-nav{display:none}}
+@media(max-width:560px){.wordmark .kit{display:none}}
+/* At phone width the two-line App Store label crowds the wordmark — shrink both. */
+@media(max-width:470px){
+  .masthead-inner{padding:12px 16px;gap:10px}
+  .wordmark{font-size:14px;letter-spacing:.08em;gap:8px}
+  .wordmark img{width:25px;height:25px}
+  .masthead .btn{padding:9px 15px;gap:8px}
+  .masthead .btn .sub{display:none}
+  .masthead .btn .main{font-size:13px}
+  .masthead .btn svg{width:15px;height:15px}
+}
+
+/* ── Layout ─────────────────────────────────────────────────────────── */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,40px)}
+section.band{padding:clamp(56px,7vw,92px) 0;border-top:1px solid var(--paper-3)}
+section.band:first-of-type{border-top:0}
+.sec-head{max-width:64ch;margin-bottom:38px}
+.sec-head .lead{margin-top:14px}
+
+/* ── Hero ───────────────────────────────────────────────────────────── */
+.hero{padding:clamp(48px,6.5vw,84px) 0 clamp(40px,5vw,60px)}
+.hero h1{margin-top:4px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
+.stamp{
+  display:inline-flex;align-items:center;gap:9px;margin-top:26px;padding:8px 16px 8px 12px;
+  border:1.5px dashed var(--paper-3);border-radius:999px;
+  font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);
+  font-family:var(--font-display);
+}
+.stamp b{color:var(--ink-2);font-weight:700}
+.stamp .dot{width:7px;height:7px;border-radius:50%;background:var(--coral);flex:none;box-shadow:0 0 0 4px rgba(255,107,77,.18)}
+
+/* ── Fact sheet ─────────────────────────────────────────────────────── */
+.facts{background:var(--paper-2);border:1px solid var(--paper-3);border-radius:18px;padding:clamp(22px,3vw,34px);margin-top:8px}
+.facts dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:0 clamp(24px,4vw,52px)}
+.facts .row{display:grid;grid-template-columns:118px minmax(0,1fr);gap:14px;padding:13px 0;border-bottom:1px solid var(--paper-3);align-items:baseline;min-width:0}
+.facts dt{font-family:var(--font-display);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.facts dd{font-size:15px;color:var(--ink);min-width:0;overflow-wrap:anywhere}
+.facts dd a{color:var(--route);text-decoration-color:rgba(217,38,38,.35);text-underline-offset:3px}
+@media(max-width:560px){.facts .row{grid-template-columns:1fr;gap:3px;padding:11px 0}}
+
+/* ── Copy blocks ────────────────────────────────────────────────────── */
+.copyblock{border:1px solid var(--paper-3);border-radius:16px;background:#fff;overflow:hidden;margin-top:20px}
+.copyblock-head{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:13px 18px;background:var(--paper-2);border-bottom:1px solid var(--paper-3);
+}
+.copyblock-head .t{font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.copyblock-head .t em{font-style:normal;color:var(--ink-3);font-weight:600;letter-spacing:.06em;margin-left:9px;text-transform:none}
+.copybtn{
+  border:1.5px solid var(--paper-3);background:#fff;color:var(--ink-2);cursor:pointer;
+  padding:7px 15px;border-radius:999px;font-family:var(--font-display);
+  font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  transition:border-color .2s,color .2s,background .2s;white-space:nowrap;flex:none;
+}
+.copybtn:hover{border-color:var(--coral);color:var(--coral)}
+.copybtn.done{background:var(--coral);border-color:var(--coral);color:#fff}
+.copyblock .body{padding:20px 22px;font-size:15.5px;color:var(--ink);line-height:1.68}
+.copyblock .body p+p{margin-top:.85em}
+.copyblock.short .body{font-size:17px;font-family:var(--font-display);font-weight:700;line-height:1.35;letter-spacing:-.005em}
+
+/* ── Numbered list (angles) ─────────────────────────────────────────── */
+.numlist{display:grid;gap:0;margin-top:8px;max-width:78ch}
+.numlist li{list-style:none;display:grid;grid-template-columns:30px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--paper-3)}
+.numlist li:last-child{border-bottom:1px solid var(--paper-3)}
+.numlist .k{font-family:var(--font-num);font-size:14px;color:var(--coral);letter-spacing:.08em;padding-top:4px}
+.numlist strong{display:block;font-size:17px;font-weight:700;font-family:var(--font-display);letter-spacing:.005em;margin-bottom:5px}
+.numlist span{display:block;font-size:15px;color:var(--ink-2)}
+
+/* ── Dark band (films) ──────────────────────────────────────────────── */
+.dark{background:linear-gradient(165deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;border-top:0}
+.dark h2,.dark h3{color:#fff}
+.dark .lead{color:rgba(255,255,255,.66)}
+.player{position:relative;background:#000;overflow:hidden;border-radius:4px;box-shadow:0 40px 90px -40px rgba(0,0,0,.9)}
+.player.r169{aspect-ratio:16/9}
+.player.r916{aspect-ratio:9/16}
+.player img.poster,.player video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.player.dim img.poster{filter:brightness(.74) saturate(.96)}
+.player video{z-index:2}
+.play-cap{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;
+  display:inline-flex;align-items:center;gap:11px;padding:15px 25px;border-radius:999px;border:0;cursor:pointer;
+  background:var(--coral);color:#fff;font-family:var(--font-display);font-size:14px;font-weight:700;letter-spacing:.03em;
+  white-space:nowrap;box-shadow:0 14px 38px -10px rgba(0,0,0,.7);
+  transition:transform .2s var(--ease);
+}
+.play-cap:hover{transform:translate(-50%,-50%) scale(1.045)}
+.play-cap svg{width:15px;height:15px;fill:currentColor}
+.player.live .play-cap,.player.live img.poster{display:none}
+.filmgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:clamp(18px,2.4vw,30px);margin-top:36px}
+.filmcap{margin-top:13px}
+.filmcap b{display:block;font-family:var(--font-display);font-size:14.5px;font-weight:700;letter-spacing:.01em}
+.filmcap span{display:block;font-size:13px;color:rgba(255,255,255,.5);margin-top:2px;line-height:1.5}
+.dl{
+  display:inline-flex;align-items:center;gap:6px;margin-top:9px;
+  font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  font-family:var(--font-display);color:var(--gold);text-decoration:none;
+  border-bottom:1px solid rgba(255,199,77,.3);padding-bottom:2px;transition:border-color .2s;
+}
+.dl:hover{border-color:var(--gold)}
+.dl svg{width:12px;height:12px;fill:currentColor}
+.paper-dl{color:var(--route);border-bottom-color:rgba(217,38,38,.28)}
+.paper-dl:hover{border-bottom-color:var(--route)}
+
+/* ── Screenshot grid ────────────────────────────────────────────────── */
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(186px,1fr));gap:clamp(20px,2.6vw,34px);margin-top:36px}
+.shot{display:block;text-decoration:none;color:inherit}
+.shot img{width:100%;height:auto;border-radius:9px;border:1px solid var(--paper-3);box-shadow:var(--polaroid-shadow);background:#000}
+.shot b{display:block;font-family:var(--font-display);font-size:14px;font-weight:700;margin-top:15px;letter-spacing:.005em}
+.shot span{display:block;font-size:13px;color:var(--ink-2);margin-top:3px;line-height:1.5}
+
+/* ── Brand ──────────────────────────────────────────────────────────── */
+.brandgrid{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:start;margin-top:8px}
+@media(max-width:720px){.brandgrid{grid-template-columns:1fr}}
+.iconcard{background:var(--paper-2);border:1px solid var(--paper-3);border-radius:18px;padding:26px;text-align:center}
+.iconcard img{width:118px;height:118px;border-radius:26px;margin:0 auto;box-shadow:0 14px 34px -14px rgba(0,0,0,.4)}
+.iconcard .n{font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:18px}
+.swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:12px;margin-top:22px}
+.sw{border:1px solid var(--paper-3);border-radius:12px;overflow:hidden;background:#fff}
+.sw .chip{height:56px}
+.sw .m{padding:9px 12px 11px;font-size:11px;line-height:1.45}
+.sw .m b{display:block;font-family:var(--font-display);font-size:12px;letter-spacing:.02em}
+.sw .m code{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
+.rules{display:grid;gap:2px;margin-top:6px}
+.rules li{list-style:none;display:grid;grid-template-columns:20px 1fr;gap:13px;padding:12px 0;border-top:1px solid var(--paper-3);font-size:14.5px;color:var(--ink-2)}
+.rules li:last-child{border-bottom:1px solid var(--paper-3)}
+.rules .y{color:#2E8B57;font-weight:700}
+.rules .n{color:var(--route);font-weight:700}
+.rules b{color:var(--ink);font-weight:700}
+
+/* ── Callout ────────────────────────────────────────────────────────── */
+.callout{
+  border-left:3px solid var(--route);background:var(--paper-2);
+  border-radius:0 14px 14px 0;padding:22px 26px;margin-top:26px;max-width:74ch;
+}
+.callout b{font-family:var(--font-display);display:block;margin-bottom:7px;font-size:15px}
+.callout p{font-size:14.5px;color:var(--ink-2)}
+.callout code{font-family:var(--font-mono);font-size:13px;background:#fff;border:1px solid var(--paper-3);border-radius:5px;padding:2px 6px}
+
+/* ── Contact ────────────────────────────────────────────────────────── */
+.plain{display:grid;gap:2px;margin-top:30px;max-width:74ch}
+.plain > div{display:grid;grid-template-columns:168px 1fr;gap:18px;padding:15px 0;border-top:1px solid var(--paper-3);align-items:baseline}
+.plain > div:last-child{border-bottom:1px solid var(--paper-3)}
+.plain b{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.05em}
+.plain span{font-size:14.5px;color:var(--ink-2)}
+.plain a{color:var(--route)}
+@media(max-width:560px){.plain > div{grid-template-columns:1fr;gap:3px}}
+
+/* ── Footer ─────────────────────────────────────────────────────────── */
+footer{border-top:1px solid var(--paper-3);padding:34px 0 46px;background:var(--paper-2)}
+.foot{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;flex-wrap:wrap;gap:16px 34px;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--ink-3)}
+.foot-links{display:flex;flex-wrap:wrap;gap:20px}
+.foot a{color:var(--ink-2);text-decoration:none}
+.foot a:hover{color:var(--coral)}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="/" class="wordmark"><img src="assets/brand/icon.png" alt="" width="29" height="29"> Roamango <span class="kit">Press kit</span></a>
+    <nav class="mast-nav" aria-label="Press kit sections">
+      <a href="#facts">Facts</a>
+      <a href="#copy">Copy</a>
+      <a href="#films">Films</a>
+      <a href="#shots">Screenshots</a>
+      <a href="#brand">Brand</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="https://apps.apple.com/app/roamango-your-trips-filmed/id6788371735" class="btn btn-primary" target="_blank" rel="noopener">
+      <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+      <span><span class="sub">Download on the</span><span class="main">App Store</span></span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="label">For press</div>
+    <h1>Press kit</h1>
+    <p class="lead">Everything on this page is cleared for editorial use — copy, screenshots, example films and brand assets. Take what you need; no permission email required. If you want something that isn't here, ask and we'll shoot it.</p>
+    <div class="hero-cta">
+      <a href="https://media.roamango.co/roamango-press-kit.zip" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z"/></svg>
+        Download everything <span style="opacity:.7;font-weight:600">· 26&nbsp;MB</span>
+      </a>
+      <a href="mailto:press@chaoskampf.co" class="btn btn-ghost">press@chaoskampf.co</a>
+    </div>
+    <div class="stamp"><span class="dot"></span> Updated <b>20 September 2026</b> · Roamango 1.0.2</div>
+  </div>
+</section>
+
+<!-- ═══════════════ FACT SHEET ═══════════════ -->
+<section class="band" id="facts">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Fact sheet</div>
+      <h2>The short version.</h2>
+    </div>
+    <div class="facts">
+      <dl>
+        <div class="row"><dt>Name</dt><dd>Roamango</dd></div>
+        <div class="row"><dt>Developer</dt><dd>Chaoskampf Ltd (United Kingdom)</dd></div>
+        <div class="row"><dt>Platform</dt><dd>iPhone and iPad · iOS 17 and later</dd></div>
+        <div class="row"><dt>Released</dt><dd>September 2026</dd></div>
+        <div class="row"><dt>Version</dt><dd>1.0.2</dd></div>
+        <div class="row"><dt>Price</dt><dd>Free to download and use. One-time £8.99 unlock — no subscription</dd></div>
+        <div class="row"><dt>Category</dt><dd>Travel · Photo &amp; Video</dd></div>
+        <div class="row"><dt>Languages</dt><dd>English, German, French, Spanish, Italian, Portuguese&nbsp;(BR), Japanese, Korean</dd></div>
+        <div class="row"><dt>Output</dt><dd>1080p H.264 video file · 9:16 or 16:9 · 24, 30 or 60&nbsp;fps</dd></div>
+        <div class="row"><dt>Accounts</dt><dd>None. No sign-up, no email, no server</dd></div>
+        <div class="row"><dt>App Store</dt><dd><a href="https://apps.apple.com/app/roamango-your-trips-filmed/id6788371735" target="_blank" rel="noopener">apps.apple.com/app/id6788371735</a></dd></div>
+        <div class="row"><dt>Website</dt><dd><a href="https://roamango.co">roamango.co</a></dd></div>
+        <div class="row"><dt>Privacy policy</dt><dd><a href="https://chaoskampf.co/roamango-privacy.html" target="_blank" rel="noopener">chaoskampf.co/roamango&#8209;privacy</a></dd></div>
+        <div class="row"><dt>Press contact</dt><dd><a href="mailto:press@chaoskampf.co">press@chaoskampf.co</a></dd></div>
+      </dl>
+    </div>
+    <p style="margin-top:26px"><span class="note"><span class="arrow">↘</span> want a review code? Email us — they unlock everything, and we never ask for coverage in return.</span></p>
+  </div>
+</section>
+
+<!-- ═══════════════ BOILERPLATE ═══════════════ -->
+<section class="band" id="copy">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Boilerplate</div>
+      <h2>Copy you can lift.</h2>
+      <p class="lead">Three lengths, written to be quoted verbatim. No approval needed, no changes requested afterwards.</p>
+    </div>
+
+    <div class="copyblock short">
+      <div class="copyblock-head">
+        <span class="t">One line <em>18 words</em></span>
+        <button class="copybtn" type="button" data-copy="#c1">Copy</button>
+      </div>
+      <div class="body" id="c1"><p>Roamango finds the trips hiding in your camera roll and renders each one as a cinematic map film.</p></div>
+    </div>
+
+    <div class="copyblock">
+      <div class="copyblock-head">
+        <span class="t">Short <em>50 words</em></span>
+        <button class="copybtn" type="button" data-copy="#c2">Copy</button>
+      </div>
+      <div class="body" id="c2"><p>Roamango is an iPhone app that reads the location data your camera already saved and finds the trips hiding in your photo library. Each one becomes a cinematic map film: the route draws itself between destinations while your best photos surface at every stop. It all happens on the device.</p></div>
+    </div>
+
+    <div class="copyblock">
+      <div class="copyblock-head">
+        <span class="t">Standard <em>140 words</em></span>
+        <button class="copybtn" type="button" data-copy="#c3">Copy</button>
+      </div>
+      <div class="body" id="c3">
+        <p>Roamango is an iPhone app that turns a camera roll into travel films. It reads the GPS coordinates your phone already wrote into every photo, works out where you went and when, and presents your travel history as pins on a globe — no sorting, no albums, no setup.</p>
+        <p>Pick a trip and Roamango renders it as a cinematic map video: the route drawing itself between destinations, your best photos surfacing at each stop, set to cleared music or your own recorded narration. It chooses the photos itself — favourites first, then portraits and panoramas, skipping screenshots, near-duplicates and pictures of menus.</p>
+        <p>Everything runs on the device. There is no account, no sign-up and no server holding your photos. Roamango is free to use, with a single one-time purchase — never a subscription — for the full set of styles and a watermark-free export.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ANGLES ═══════════════ -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">If you're looking for the story</div>
+      <h2>Four things worth writing about.</h2>
+      <p class="lead">Not talking points — the parts we think are genuinely unusual, including where the constraints bite.</p>
+    </div>
+    <ul class="numlist">
+      <li>
+        <span class="k">01</span>
+        <div>
+          <strong>There is no project to start.</strong>
+          <span>Most video apps hand you an empty timeline. Roamango opens on a globe that is already full, because the work was done years ago by your camera's GPS chip. The app's whole premise is that the archive exists and nobody has ever had a reason to open it.</span>
+        </div>
+      </li>
+      <li>
+        <span class="k">02</span>
+        <div>
+          <strong>Choosing the photos is the hard part, and it's done for you.</strong>
+          <span>Selection runs a tiered score — hearted photos win outright, then portraits, panoramas, shots you bothered to edit and pictures you shared — before Apple's Vision framework re-ranks on aesthetics and drops the near-duplicates, the shot-series and the frames that are mostly text. That last rule is why a holiday's worth of menus, museum placards and train tickets never make the cut.</span>
+        </div>
+      </li>
+      <li>
+        <span class="k">03</span>
+        <div>
+          <strong>A travel app with no server behind it.</strong>
+          <span>Scanning, grouping, photo selection, geocoding and video rendering all happen on the phone; place names come from a geographic database bundled inside the app rather than a lookup service. There is no account to create, and no copy of your library anywhere but your pocket. The one network call is streaming map tiles while a film renders — which does mean a render needs a connection.</span>
+        </div>
+      </li>
+      <li>
+        <span class="k">04</span>
+        <div>
+          <strong>You get a file, not a feed post.</strong>
+          <span>Every export is a plain 1080p video saved to your library — cleared music, no platform lock-in, nothing that expires. That sounds obvious until you try to get a finished file out of most apps that set your memories to licensed music.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════ FILMS ═══════════════ -->
+<section class="band dark" id="films">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Example films</div>
+      <h2>Straight off the phone.</h2>
+      <p class="lead">Unedited exports — no post, no colour grade, no compositing. Free to embed or cut into a review. Nothing loads until you press play.</p>
+    </div>
+
+    <div style="max-width:860px;margin-top:34px">
+      <div class="player r169 dim" data-src="https://media.roamango.co/hero.mp4">
+        <img class="poster" src="assets/posters/hero-16x9.jpg" alt="A frame from a Roamango film: photos printed onto a map, joined by a dashed red route." width="1920" height="1080" loading="lazy" decoding="async">
+        <button class="play-cap" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg> Play the two-minute tour</button>
+      </div>
+      <div class="filmcap">
+        <b>Full tour — 2:00, 16:9</b>
+        <span>The app finding trips, and several finished films across different map themes. The best single asset if you only want one.</span>
+        <a class="dl" href="https://media.roamango.co/hero.mp4" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z"/></svg> Download MP4</a>
+      </div>
+    </div>
+
+    <div class="filmgrid">
+      <div>
+        <div class="player r916 dim" data-src="https://media.roamango.co/roam-standard-oil.mp4">
+          <img class="poster" src="assets/posters/standard-oil.jpg" alt="A film in the Standard Oil map theme." width="1080" height="1920" loading="lazy" decoding="async">
+          <button class="play-cap" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg> Play</button>
+        </div>
+        <div class="filmcap">
+          <b>Standard Oil</b>
+          <span>Vertical, 9:16. The mid-century road-atlas theme.</span>
+          <a class="dl" href="https://media.roamango.co/roam-standard-oil.mp4" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z"/></svg> Download MP4</a>
+        </div>
+      </div>
+      <div>
+        <div class="player r916 dim" data-src="https://media.roamango.co/roam-blueprint.mp4">
+          <img class="poster" src="assets/posters/blueprint.jpg" alt="A film in the Blueprint map theme." width="1080" height="1920" loading="lazy" decoding="async">
+          <button class="play-cap" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg> Play</button>
+        </div>
+        <div class="filmcap">
+          <b>Blueprint</b>
+          <span>Vertical, 9:16. Drafting-table blues and hairlines.</span>
+          <a class="dl" href="https://media.roamango.co/roam-blueprint.mp4" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z"/></svg> Download MP4</a>
+        </div>
+      </div>
+      <div>
+        <div class="player r916 dim" data-src="https://media.roamango.co/roam-simple.mp4">
+          <img class="poster" src="assets/posters/simple.jpg" alt="A film in the Simple map theme." width="1080" height="1920" loading="lazy" decoding="async">
+          <button class="play-cap" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg> Play</button>
+        </div>
+        <div class="filmcap">
+          <b>Simple</b>
+          <span>Vertical, 9:16. Pared back — the photos carry it.</span>
+          <a class="dl" href="https://media.roamango.co/roam-simple.mp4" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z"/></svg> Download MP4</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SCREENSHOTS ═══════════════ -->
+<section class="band" id="shots">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Screenshots</div>
+      <h2>The app itself.</h2>
+      <p class="lead">Full-resolution PNGs, presented in an iPhone frame on a transparent ground so they drop onto any background. Click a shot for the original. Want them unframed, or a screen that isn't here? Ask.</p>
+    </div>
+    <div class="shots">
+      <a class="shot" href="assets/screens/globe.png" download><img src="assets/screens/globe.png" alt="The globe view with pins on every detected trip." loading="lazy" decoding="async"><b>The globe</b><span>Every trip the app found, pinned. This is the first screen after a scan.</span></a>
+      <a class="shot" href="assets/screens/trip-editor.png" download><img src="assets/screens/trip-editor.png" alt="The trip editor with numbered stop pins on a map." loading="lazy" decoding="async"><b>Trip editor</b><span>Numbered stops in order. Drag, merge, delete or add a place by hand.</span></a>
+      <a class="shot" href="assets/screens/select-photos.png" download><img src="assets/screens/select-photos.png" alt="Photo selection grid for a single stop." loading="lazy" decoding="async"><b>Photo selection</b><span>The app's picks for one stop — and the override if you disagree.</span></a>
+      <a class="shot" href="assets/screens/trip-settings.png" download><img src="assets/screens/trip-settings.png" alt="Per-trip reel settings." loading="lazy" decoding="async"><b>Film settings</b><span>Length, map theme, route line, pacing — set per trip, not globally.</span></a>
+      <a class="shot" href="assets/screens/photo-style.png" download><img src="assets/screens/photo-style.png" alt="Photo reveal style picker." loading="lazy" decoding="async"><b>Reveal styles</b><span>How each photo arrives on the map — postcard, polaroid, full frame.</span></a>
+      <a class="shot" href="assets/screens/photo-style-fullscreen.png" download><img src="assets/screens/photo-style-fullscreen.png" alt="Full-screen photo reveal style." loading="lazy" decoding="async"><b>Full-frame reveal</b><span>The same stop, shown edge to edge.</span></a>
+      <a class="shot" href="assets/screens/year-in-review.png" download><img src="assets/screens/year-in-review.png" alt="Year in Review screen." loading="lazy" decoding="async"><b>Year in Review</b><span>A whole year of travel swept into one film.</span></a>
+      <a class="shot" href="assets/screens/custom-night-out.png" download><img src="assets/screens/custom-night-out.png" alt="A custom film built from a single night out." loading="lazy" decoding="async"><b>Custom films</b><span>Any date range, any pins — a single night out works as well as a year.</span></a>
+      <a class="shot" href="assets/screens/compare-1.png" download><img src="assets/screens/compare-1.png" alt="Crossed Paths comparison view." loading="lazy" decoding="async"><b>Crossed Paths</b><span>Two travel histories overlaid: where you both went.</span></a>
+      <a class="shot" href="assets/screens/compare-2.png" download><img src="assets/screens/compare-2.png" alt="Crossed Paths near-miss detail." loading="lazy" decoding="async"><b>Crossed Paths, detail</b><span>And the times you were in the same city and missed each other.</span></a>
+      <a class="shot" href="assets/screens/stats.png" download><img src="assets/screens/stats.png" alt="Travel statistics screen." loading="lazy" decoding="async"><b>Stats</b><span>Countries, distance, days away — derived from the same photo data.</span></a>
+      <a class="shot" href="assets/screens/music.png" download><img src="assets/screens/music.png" alt="Music picker." loading="lazy" decoding="async"><b>Music</b><span>31 cleared tracks in the app. Nothing that gets a post muted.</span></a>
+      <a class="shot" href="assets/screens/narration.png" download><img src="assets/screens/narration.png" alt="Narration recording screen." loading="lazy" decoding="async"><b>Narration</b><span>Talk over your own film; the music ducks underneath you.</span></a>
+      <a class="shot" href="assets/screens/privacy.png" download><img src="assets/screens/privacy.png" alt="Privacy explainer screen." loading="lazy" decoding="async"><b>On device</b><span>What the app tells users about where their photos go. Nowhere.</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BRAND ═══════════════ -->
+<section class="band" id="brand">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Brand</div>
+      <h2>Name, mark and colour.</h2>
+    </div>
+    <div class="brandgrid">
+      <div>
+        <div class="iconcard">
+          <img src="assets/brand/icon.png" alt="The Roamango app icon." width="118" height="118">
+          <div class="n">App icon · PNG</div>
+        </div>
+        <a class="dl paper-dl" href="assets/brand/icon.png" download style="margin-top:14px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z"/></svg> Download icon</a>
+      </div>
+      <div>
+        <ul class="rules">
+          <li><span class="y">✓</span><span><b>Roamango</b> — one word, capital R, no space, no hyphen. Written in Latin script in every language, including Japanese and Korean.</span></li>
+          <li><span class="y">✓</span><span>A finished video is <b>a roam</b>. That's the word the app uses throughout, and it's lowercase.</span></li>
+          <li><span class="n">✕</span><span>Not <b>RoamReels</b>. That was the working title during development and it isn't the product's name.</span></li>
+          <li><span class="n">✕</span><span>Not <b>Roamango Pro</b> as a separate product — there is one app, with one optional unlock inside it.</span></li>
+          <li><span class="y">✓</span><span>Roamango and the mango mark are trademarks of <b>Chaoskampf Ltd</b>.</span></li>
+        </ul>
+
+        <div class="swatches">
+          <div class="sw"><div class="chip" style="background:#FF6B4D"></div><div class="m"><b>Coral</b><code>#FF6B4D</code></div></div>
+          <div class="sw"><div class="chip" style="background:#D92626"></div><div class="m"><b>Route red</b><code>#D92626</code></div></div>
+          <div class="sw"><div class="chip" style="background:#FAF5E6"></div><div class="m"><b>Paper</b><code>#FAF5E6</code></div></div>
+          <div class="sw"><div class="chip" style="background:#1A3F45"></div><div class="m"><b>Deep</b><code>#1A3F45</code></div></div>
+          <div class="sw"><div class="chip" style="background:#1F2328"></div><div class="m"><b>Ink</b><code>#1F2328</code></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <b>One thing we have to ask about map imagery</b>
+      <p>Every map in Roamango is drawn with Mapbox and OpenStreetMap data, and their licences require the credit to stay visible. If you crop a still or a clip, please keep the <code>© Mapbox © OpenStreetMap</code> line and the Mapbox wordmark in frame — or crop above them and add the same credit in your caption. This is the one element of a Roamango film that users can't remove either, paid or not.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section class="band" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Contact</div>
+      <h2>A real person answers.</h2>
+      <p class="lead">Roamango is made by Chaoskampf Ltd, a small independent developer in the UK. Questions, review codes, a demo, a quote for a piece, or a film shot to your brief — just ask.</p>
+    </div>
+    <div class="hero-cta">
+      <a href="mailto:press@chaoskampf.co" class="btn btn-primary">press@chaoskampf.co</a>
+      <a href="https://media.roamango.co/roamango-press-kit.zip" class="btn btn-ghost">Download the kit</a>
+    </div>
+    <div class="plain">
+      <div><b>Review codes</b><span>Free App Store codes that unlock everything. Email and say which store region you're in.</span></div>
+      <div><b>Custom footage</b><span>Need a film of a specific place, theme or aspect ratio for a layout? We'll render it and send the file.</span></div>
+      <div><b>Interviews</b><span>Happy to talk about on-device processing, the photo-selection algorithm, or shipping as a one-person studio.</span></div>
+      <div><b>Embargo</b><span>None. Everything here is public and there's nothing to hold.</span></div>
+      <div><b>Support</b><span>User-facing questions go to <a href="mailto:developer@chaoskampf.co">developer@chaoskampf.co</a>.</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <span>© 2026 Chaoskampf Ltd. Roamango and the mango mark are trademarks of Chaoskampf Ltd.</span>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="/">Roamango.co</a>
+      <a href="https://apps.apple.com/app/roamango-your-trips-filmed/id6788371735" target="_blank" rel="noopener">App Store</a>
+      <a href="https://chaoskampf.co/roamango-privacy.html" target="_blank" rel="noopener">Privacy</a>
+      <a href="https://chaoskampf.co" target="_blank" rel="noopener">Chaoskampf</a>
+    </nav>
+    <span>Maps © <a href="https://www.mapbox.com/about/maps/" target="_blank" rel="noopener">Mapbox</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ── Copy buttons ─────────────────────────────────────────────────── */
+  function plain(el){
+    return [].slice.call(el.querySelectorAll('p')).map(function(p){
+      return p.textContent.trim();
+    }).join('\n\n');
+  }
+  [].slice.call(document.querySelectorAll('.copybtn')).forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var src = document.querySelector(btn.getAttribute('data-copy'));
+      if(!src) return;
+      var text = plain(src);
+      var done = function(){
+        btn.textContent = 'Copied';
+        btn.classList.add('done');
+        setTimeout(function(){ btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1900);
+      };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+      function fallback(){
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.cssText = 'position:fixed;top:-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); done(); } catch(e){ /* user can select by hand */ }
+        document.body.removeChild(ta);
+      }
+    });
+  });
+
+  /* ── Players — zero video bytes until asked, same as the front page ─ */
+  [].slice.call(document.querySelectorAll('.player[data-src]')).forEach(function(box){
+    var btn = box.querySelector('.play-cap');
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      if(box.classList.contains('live')) return;
+      var v = document.createElement('video');
+      v.src = box.getAttribute('data-src');
+      v.controls = true;
+      v.playsInline = true;
+      v.preload = 'auto';
+      v.setAttribute('webkit-playsinline','');
+      box.appendChild(v);
+      box.classList.add('live');
+      v.play().catch(function(){ /* controls are there; let them press it */ });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

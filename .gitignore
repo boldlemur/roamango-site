@@ -3,3 +3,6 @@
 # Large media served from Cloudflare R2, not GitHub Pages
 assets/video/
 assets/tutorials/
+
+# Built press-kit archive — uploaded to R2, not served from Pages
+dist/
